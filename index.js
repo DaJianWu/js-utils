@@ -1,3 +1,1 @@
-const variable = 'hello world';
-
-export default variable;
+export { copy } from './src/copy';
