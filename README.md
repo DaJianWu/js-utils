@@ -5,3 +5,9 @@
 ```shell
 $ npm i @wudajian/js-utils
 ```
+
+```js
+import { copy } from '@wudajian/js-utils';
+
+copy('hello world');
+```
