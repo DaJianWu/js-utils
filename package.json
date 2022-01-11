@@ -1,19 +1,24 @@
 {
   "name": "@wudajian/js-utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "一个 JavaScript 工具库",
+  "keywords": [
+    "js",
+    "utils",
+    "snippets"
+  ],
+  "author": "wudajian",
+  "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "homepage": "https://github.com/DaJianWu/js-utils#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DaJianWu/js-utils.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/DaJianWu/js-utils/issues"
   },
-  "homepage": "https://github.com/DaJianWu/js-utils#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
