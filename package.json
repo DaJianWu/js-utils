@@ -9,7 +9,11 @@
   ],
   "author": "wudajian",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/DaJianWu/js-utils#readme",
   "repository": {
     "type": "git",
@@ -19,6 +23,21 @@
     "url": "https://github.com/DaJianWu/js-utils/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "pnpm run clear && pnpm run dev",
+    "build": "pnpm run clear && tsc",
+    "dev": "node scripts/server.js",
+    "clear": "node scripts/clear.js dist",
+    "_publish": "sh publish.sh pacth",
+    "eslint": "eslint src/**/*.{js,ts}",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "typescript": "^5.1.6"
   }
 }
