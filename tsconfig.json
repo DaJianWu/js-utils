@@ -1,13 +1,13 @@
 /* Visit https://aka.ms/tsconfig.json to read more about this file */
 {
   "compilerOptions": {
-    /* 
-      Basic Options 
+    /*
+      Basic Options
     */
-    /* 
-      Enable incremental compilation 
+    /*
+      Enable incremental compilation
     */
-    // "incremental": true, 
+    // "incremental": true,
     /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
     "target": "es5",
     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
@@ -46,8 +46,8 @@
     // "downlevelIteration": true,
     /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
     // "isolatedModules": true,
-    /* 
-      Strict Type-Checking Options 
+    /*
+      Strict Type-Checking Options
     */
     /* Enable all strict type-checking options. */
     "strict": true,
@@ -65,8 +65,8 @@
     // "noImplicitThis": true,
     /* Parse in strict mode and emit "use strict" for each source file. */
     // "alwaysStrict": true,
-    /* 
-      Additional Checks 
+    /*
+      Additional Checks
     */
     /* Report errors on unused locals. */
     // "noUnusedLocals": true,
@@ -80,8 +80,8 @@
     // "noUncheckedIndexedAccess": true,
     /* Require undeclared properties from index signatures to use element accesses. */
     // "noPropertyAccessFromIndexSignature": true,
-    /* 
-      Module Resolution Options 
+    /*
+      Module Resolution Options
     */
     /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
     // "moduleResolution": "node",
@@ -103,7 +103,7 @@
     // "preserveSymlinks": true,
     /* Allow accessing UMD globals from modules. */
     // "allowUmdGlobalAccess": true,
-    /* 
+    /*
       Source Map Options
     */
     /* Specify the location where debugger should locate TypeScript files instead of source locations. */
@@ -119,7 +119,7 @@
     // "experimentalDecorators": true,
     /* Enables experimental support for emitting type metadata for decorators. */
     // "emitDecoratorMetadata": true,
-    /* 
+    /*
       Advanced Options
     */
     /* Skip type checking of declaration files. */

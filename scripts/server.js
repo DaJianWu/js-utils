@@ -9,11 +9,20 @@ const { exec } = require('child_process');
 // Node.js 进程启动时所在的目录
 // console.log(process.cwd());
 
+// 启动 TypeScript 监听
+const tscProcess = exec('tsc --watch');
+
+// 监听 tsc 进程的输出
+tscProcess.stdout.on('data', (data) => {
+  console.log(data);
+});
+
+// tscProcess.stderr.on('data', (data) => {
+//   console.error(`TypeScript: ${data}`);
+// });
+
 // 指定允许访问的文件的根路径
 const rootPath = path.resolve(__dirname, '../');
-
-// 启动 TypeScript 监听
-const tscProcess = exec('tsc --outDir dist --watch');
 
 // 验证文件路径
 function validateFilePath(filePath) {
@@ -21,6 +30,7 @@ function validateFilePath(filePath) {
   return filePath.startsWith(rootPath);
 }
 
+// 创建服务器
 const server = http.createServer((req, res) => {
   // 获取请求的 URL 路径
   const url = req.url;
@@ -41,7 +51,7 @@ const server = http.createServer((req, res) => {
     filePath = path.join(rootPath, url);
   }
 
-  console.log(url, filePath);
+  // console.log(url, filePath);
 
   // 验证文件路径
   if (!validateFilePath(filePath)) {
@@ -76,19 +86,10 @@ const server = http.createServer((req, res) => {
   });
 });
 
-// 服务器监听的端口号
+// 监听端口号
 const port = 3000;
 
+// 监听服务器
 server.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
-});
-
-// 监听 tsc 进程的输出
-
-tscProcess.stdout.on('data', (data) => {
-  console.log(`TypeScript: ${data}`);
-});
-
-tscProcess.stderr.on('data', (data) => {
-  console.error(`TypeScript: ${data}`);
 });

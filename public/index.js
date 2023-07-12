@@ -1,3 +1,5 @@
-import { _copy } from '../dist/index.js';
+// @ts-check
 
-_copy('_copy');
+import * as Utils from '../dist/index.js';
+
+Utils._copy('_copy');

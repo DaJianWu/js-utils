@@ -23,12 +23,12 @@
     "url": "https://github.com/DaJianWu/js-utils/issues"
   },
   "scripts": {
-    "start": "pnpm run clear && pnpm run dev",
+    "start": "pnpm run clear && pnpm run server",
     "build": "pnpm run clear && tsc",
-    "dev": "node scripts/server.js",
+    "server": "node scripts/server.js",
     "clear": "node scripts/clear.js dist",
-    "_publish": "sh publish.sh pacth",
     "eslint": "eslint src/**/*.{js,ts}",
+    "_publish": "sh publish.sh pacth",
     "prepare": "husky install"
   },
   "devDependencies": {
