@@ -31,13 +31,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      # - name: Fetch complete repository
+      #   run: git fetch --unshallow
+
+      # - name: Check for changes in docs directory
+      #   id: docs_changes
+      #   run: |
+      #     git diff-tree --name-only --no-commit-id 7d75d4efa42ab3172f0057224dc6c1ecac9ba1cc 92f8c49512194c2962a2e38690dcf2489bf87684
+
       - name: Setup Pages
+        # if: steps.docs_changes.outputs.has_changes == '1'
         uses: actions/configure-pages@v3
+
       - name: Upload artifact
+        # if: steps.docs_changes.outputs.has_changes == '1'
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
           path: docs
+
       - name: Deploy to GitHub Pages
         id: deployment
+        # if: steps.docs_changes.outputs.has_changes == '1'
         uses: actions/deploy-pages@v2
