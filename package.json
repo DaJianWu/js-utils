@@ -29,6 +29,7 @@
     "clear": "node scripts/clear.js dist",
     "docs": "typedoc",
     "eslint": "eslint src/**/*.{js,ts}",
+    "changelog":"conventional-changelog -p angular -i CHANGELOG.md -s",
     "_publish": "sh publish.sh pacth",
     "prepare": "husky install"
   },
@@ -36,6 +37,7 @@
     "@types/node": "^20.3.3",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
+    "conventional-changelog-cli": "^3.0.0",
     "eslint": "^8.44.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
