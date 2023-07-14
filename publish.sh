@@ -11,8 +11,12 @@ fi
 # 运行构建命令，生成需要发布的文件
 pnpm run build
 
+# 生成 docs 和 CHANGELOG.md
+pnpm run docs
+pnpm run changelog
+
 # 将需要发布的文件提交至 Git 暂存区
-git add ./dist
+git add ./dist ./docs ./CHANGELOG.md
 git commit -m "🔧 build: 编译发布"
 
 # 检查是否已登录到正确的 npm 账号

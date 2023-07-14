@@ -37,8 +37,9 @@ $ pnpm start
 $ pnpm run _publish
 ```
 
-or
+`or`
 
 ```bash
-$ sh publish.sh minor/major
+$ sh publish.sh minor
+$ sh publish.sh major
 ```
