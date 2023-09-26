@@ -29,7 +29,7 @@
     "clear": "node scripts/clear.js dist",
     "eslint": "eslint src/**/*.{js,ts}",
     "docs": "typedoc",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "_publish": "sh publish.sh patch",
     "prepare": "husky install"
   },
