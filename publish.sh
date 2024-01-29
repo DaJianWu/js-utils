@@ -26,12 +26,12 @@ PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 echo "发布版本 $PACKAGE_VERSION"
 
 # 写入 TypeScript 文件
-echo "console.log('js-utils version \"$VERSION\"');" >> src/index.ts
+echo "console.log('js-utils version \"$PACKAGE_VERSION\"');" >> src/index.ts
 
 # 将需要发布的文件提交至 Git 暂存区
 # git add ./dist ./docs ./CHANGELOG.md
 git add .
-git commit -m "🔧 build: ($name: $version): 编译发布"
+git commit -m "🔧 build: ($PACKAGE_VERSION): 编译发布"
 
 # 发布包到 npm
 npm publish --access public
