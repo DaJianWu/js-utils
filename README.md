@@ -34,12 +34,7 @@ $ pnpm start
 ## ⚙️ 编译发布
 
 ```bash
-$ pnpm run _publish
-```
-
-`or`
-
-```bash
+$ sh publish.sh patch
 $ sh publish.sh minor
 $ sh publish.sh major
 ```

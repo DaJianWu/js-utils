@@ -1,15 +1,15 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/node': ^20.3.3
-  '@typescript-eslint/eslint-plugin': ^5.61.0
-  '@typescript-eslint/parser': ^5.61.0
-  conventional-changelog-cli: ^3.0.0
-  eslint: ^8.44.0
-  husky: ^8.0.3
-  lint-staged: ^13.2.3
-  typedoc: ^0.24.8
-  typescript: ^5.1.6
+  '@types/node': 20.x
+  '@typescript-eslint/eslint-plugin': 5.x
+  '@typescript-eslint/parser': 5.x
+  conventional-changelog-cli: 3.x
+  eslint: 8.x
+  husky: 8.x
+  lint-staged: 13.x
+  typedoc: 0.x
+  typescript: 5.x
 
 devDependencies:
   '@types/node': 20.3.3
