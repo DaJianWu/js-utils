@@ -19,25 +19,25 @@ pnpm run docs
 pnpm run changelog
 
 # 自增版本号并创建 Git 标签
-npm version $1
+npm version $1 --force
 
 # 获取当前包的版本号
 PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 echo "发布版本 $PACKAGE_VERSION"
 
 # 写入 TypeScript 文件
-echo "console.log('js-utils version \"$PACKAGE_VERSION\');" >> src/index.ts
+echo "console.log('js-utils version \"$VERSION\"');" >> src/index.ts
 
 # 将需要发布的文件提交至 Git 暂存区
 # git add ./dist ./docs ./CHANGELOG.md
 git add .
 git commit -m "🔧 build: ($name: $version): 编译发布"
 
-# 获取最新的标签
-latest_tag=$(git describe --tags --abbrev=0)
-
 # 发布包到 npm
 npm publish --access public
+
+# 获取最新的标签
+latest_tag=$(git describe --tags --abbrev=0)
 
 # 推送到远程仓库
 git push
