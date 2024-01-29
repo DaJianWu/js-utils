@@ -1,6 +1,7 @@
 # js-utils
 
 # 一个 JavaScript 代码片段库
+## [npm @wudajian/js-utils](https://www.npmjs.com/package/@wudajian/js-utils)
 
 ## ✨ 特性
 
